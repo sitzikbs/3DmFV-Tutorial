@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
-def visualzie_fv_gaussian_and_points(gmm, points, fv_per_point, fv, display=False, export=False, export_path=''):
+def visualize_fv_gaussian_and_points(gmm, points, fv_per_point, fv, display=False, export=False, export_path=''):
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
 
@@ -50,7 +50,7 @@ def visualzie_fv_gaussian_and_points(gmm, points, fv_per_point, fv, display=Fals
     return fig_image
 
 
-def visualzie_3dmfv_gaussian_and_points(gmm, points, pc_3dmfv, display=False, export=False, export_path=''):
+def visualize_3dmfv_gaussian_and_points(gmm, points, pc_3dmfv, display=False, export=False, export_path=''):
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
 
