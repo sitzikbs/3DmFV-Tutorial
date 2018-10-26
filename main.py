@@ -26,7 +26,7 @@ def generate_2d_example():
         fv = utils.get_fisher_vectors(point, gmm, normalization=False)
         # fv = utils.get_3DmFV(points, gmm.weights_, gmm.means_, np.sqrt(gmm.covariances_), normalize=False)
         fv_per_point = utils.fisher_vector_per_point(point, gmm)
-        fig_image = visualization.visualzie_fv_gaussian_and_points(gmm, point, fv_per_point, fv, display=False, export=True,
+        fig_image = visualization.visualize_fv_gaussian_and_points(gmm, point, fv_per_point, fv, display=False, export=True,
                                                        export_path=OUTPUT_PATH + '/fv_2d'+str(i)+'.png')
         print(fv)
         fig_images.append(fig_image)
@@ -57,7 +57,7 @@ def generate_3d_example():
         if point.ndim == 1:
             point = np.expand_dims(point, axis=0)
         pc_3dmfv = utils.get_3DmFV(point, gmm.weights_, gmm.means_, gmm.covariances_, normalize=True)
-        fig_image = visualization.visualzie_3dmfv_gaussian_and_points(gmm, point, pc_3dmfv[0, :, :], display=False, export=False,
+        fig_image = visualization.visualize_3dmfv_gaussian_and_points(gmm, point, pc_3dmfv[0, :, :], display=False, export=False,
                                                                    export_path=OUTPUT_PATH + '/fv_3d' + str(i) + '.png')
         fig_images.append(fig_image)
     imageio.mimsave(OUTPUT_PATH + '/3d_fv.gif', fig_images)
@@ -70,7 +70,7 @@ def generate_3d_example_2():
     points = utils.load_point_cloud_from_txt('car_130.txt')
     points = np.expand_dims(points, axis=0)
     pc_3dmfv = utils.get_3DmFV(points, gmm.weights_, gmm.means_, gmm.covariances_, normalize=True)
-    fig_image = visualization.visualzie_3dmfv_gaussian_and_points(gmm, np.squeeze(points), pc_3dmfv[0, :, :], display=False,
+    fig_image = visualization.visualize_3dmfv_gaussian_and_points(gmm, np.squeeze(points), pc_3dmfv[0, :, :], display=False,
                                                                   export=True,
                                                                   export_path=OUTPUT_PATH + '/fv_3d_model' + '.png')
 
