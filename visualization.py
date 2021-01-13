@@ -54,7 +54,7 @@ def visualize_3dmfv_gaussian_and_points(gmm, points, pc_3dmfv, display=False, ex
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
 
-    derivatives = [r"\max{$g_{\alpha}}$",r"$\sum g_{\alpha}$",
+    derivatives = [r"$\max{g_{\alpha}}$",r"$\sum g_{\alpha}$",
                    r"$\max{g_{\mu_x}}$", r"$\max{g_{\mu_y}}$", r"$\max{g_{\mu_z}}$",
                    r"$\min{g_{\mu_x}}$", r"$\min{g_{\mu_y}}$", r"$\min{g_{\mu_z}}$",
                    r"$\sum g_{\mu_x}$", r"$\sum g_{\mu_y}$", r"$\sum g_{\mu_z}$",
